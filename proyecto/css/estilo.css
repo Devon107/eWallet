@@ -1,0 +1,10 @@
+@font-face {
+   font-family: roboto;
+   src: url(../../archivos_generales/fuentes/Roboto-Regular.ttf) format('truetype');
+ }
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: roboto;
+}
