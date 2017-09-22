@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.btnMenu{
+    display: none;
+    padding: 20px;
+    background: #3f51b5;
+    color: #fff;
+}
+.menu-contenedor{
+    height:100%;
+    width:20%;
+    min-width: 300px;
+    
+    display: inline-block;
+    font-family: sans-serif;
+    background:#eeeeee ;
+    position:fixed;
+    z-index:1;
+    overflow:auto;
+}
+
+.menu-contenedor .menu-bloque{
+    width: 100%;
+}
+.menu-contenedor ul{
+    list-style: none;
+}
+.menu-contenedor .menu-bloque li a{
+    color: #212121;
+    display: block;
+    padding: 15px 20px;
+  
+    
+}
+
+.menu-contenedor .menu-bloque li a:hover{
+    -moz-transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    background: #d1c4e9 ;
+    color: #212121;
+}
+/* Ocultar ul */
+.menu-contenedor .menu-bloque ul{
+    display: none;
+}
+
+.menu-contenedor .menu-bloque ul li a{
+    background: #fafafa;
+}
+.body{
+    background: rgb(243, 242, 231);
+    font-family: sans-serif;
+}
+a{
+    text-align: none;   
+    text-decoration: none;
+    color: white;
+}
+.menu-contenedor .menu-bloque .activado > a{
+    background:#eeeeee;
+    color: #212121;
+}
+/* Telefonos */
+
+@media screen and (max-width: 450px){
+    body{
+        padding-top: 80px;
+    }
+
+    .menu-contenedor{
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        
+    }
+
+    .btnMenu {
+        display: block;
+
+    }
+}
