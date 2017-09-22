@@ -5,6 +5,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+/* Inicio datos vista */
 .btnMenu{
     display: none;
     padding: 20px;
@@ -23,12 +24,10 @@
     height:100%;
     width:20%;
     min-width: 300px;
-    
     display: inline-block;
     font-family: sans-serif;
     background:#eeeeee ;
     position:fixed;
-    
     overflow:auto;
 }
 
@@ -42,11 +41,8 @@
     color: #212121;
     display: block;
     padding: 15px 20px;
-  
-    
 }
 .html-cont{
-    
     display: block;
 }
 .menu-contenedor .menu-bloque li a:hover{
@@ -78,21 +74,12 @@ a{
     color: #212121;
     display: block;
 }
-/* Telefonos */
+
 
 @media screen and (max-width: 450px){
     body{
         padding-top: 80px;
     }
-
-    /* .menu-contenedor{
-        margin: 0;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-        
-    } */
     .bar-menu{
         margin: 0;
         width: 100%;
@@ -112,6 +99,6 @@ a{
     }
     .btnMenu {
         display: block;
-
     }
 }
+/* fin de vista */

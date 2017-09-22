@@ -1,9 +1,9 @@
 (()=>{
     var li  = document.querySelectorAll('#blqMen li');
     var obj;
-    
+
     document.getElementById('btnMenu').addEventListener('click',function(){
-        document.getElementById('sideBar').classList.add('act-menu');
+        document.getElementById('sideBar').classList.toggle('act-menu');
     })
 
     
