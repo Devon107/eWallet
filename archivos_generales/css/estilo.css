@@ -11,6 +11,14 @@
     background: #3f51b5;
     color: #fff;
 }
+.bar-menu{
+    min-width: 300px;
+    display: inline-block;
+    font-family: sans-serif;
+    position:fixed;
+    
+    overflow:auto;
+}
 .menu-contenedor{
     height:100%;
     width:20%;
@@ -20,7 +28,7 @@
     font-family: sans-serif;
     background:#eeeeee ;
     position:fixed;
-    z-index:1;
+    
     overflow:auto;
 }
 
@@ -37,7 +45,10 @@
   
     
 }
-
+.html-cont{
+    
+    display: block;
+}
 .menu-contenedor .menu-bloque li a:hover{
     -moz-transition-delay: 0.1s;
     -webkit-transition-delay: 0.1s;
@@ -62,9 +73,10 @@ a{
     text-decoration: none;
     color: white;
 }
-.menu-contenedor .menu-bloque .activado > a{
+.menu-contenedor .menu-bloque .activado > ul{
     background:#eeeeee;
     color: #212121;
+    display: block;
 }
 /* Telefonos */
 
@@ -73,15 +85,31 @@ a{
         padding-top: 80px;
     }
 
-    .menu-contenedor{
+    /* .menu-contenedor{
         margin: 0;
         width: 100%;
         position: fixed;
         top: 0;
         z-index: 1000;
         
+    } */
+    .bar-menu{
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
     }
-
+    .menu-contenedor{
+        margin: 0;
+        width: 100%;
+        display: none;
+        position: fixed;
+        top : 1px;
+    }
+    .act-menu{
+        display: block;
+    }
     .btnMenu {
         display: block;
 
