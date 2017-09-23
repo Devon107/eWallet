@@ -11,7 +11,6 @@
 }
 
 body {
-   
     margin: auto;
 }
 
@@ -32,35 +31,35 @@ body {
     height: 35px;
 }
 
-
-
-.cont{
+.cont {
     width: 25%;
     position: relative;
     top: 30px;
 }
 
-.cont > label{
+.cont > label {
     position: absolute;
     left: 5%;
     transition: all .3s ease;
+    margin-top: 30px;
 }
 
-.cont > label.active.stay{
-    margin-top: -16px;
+.cont > label.active.stay {
+    margin-top: 10px;
     font-size: 11px;
     color: #2980b9;
 }
 
-.txt{
+.txt {
     width: 100%;
     outline: none;
     border: none;
     border-bottom: 2px solid #ecf0f1;
     margin-left: 5%;
     transition: all .3s ease;
+    margin-top: 30px;
 }
 
-.cont > label.active + input{
+.cont > label.active + input {
     border-color: #2980b9;
 }

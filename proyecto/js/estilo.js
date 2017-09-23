@@ -1,14 +1,21 @@
 (() => {
-    var ac = document.getElementById('txt');
-    document.getElementById('txt').addEventListener('focus', function () {
-        document.getElementById('lbl1').classList.add('active', 'stay');
-    })
-    document.getElementById('txt').addEventListener('blur', function () {
-        if (ac.value.length > 0) {
-            console.log('cant delete')
-        }
-        else {
-            document.getElementById('lbl1').classList.remove('active', 'stay');
-        }
-    })
+    var inputs = document.getElementsByClassName('txt');
+    var labels = document.getElementsByClassName("lbl");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('click', funo(i));
+    }
+
+    function funo(i) {
+        inputs[i].addEventListener('focus', function () {
+            labels[i].classList.add('active', 'stay');
+        })
+        inputs[i].addEventListener('blur', function () {
+            if (inputs[i].value.length > 0) {
+                console.log('cant delete')
+            }
+            else {
+                labels[i].classList.remove('active', 'stay');
+            }
+        })
+    }
 })();
