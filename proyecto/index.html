@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>e-Wallet</title>
     <link rel="stylesheet" href="css/estilo.css"> </head>
+<script type="text/javascript" src="js/validacion.js">
+</script>
 
 <body>
     <header>
@@ -18,7 +20,7 @@
             <br>
             <h2>Registro</h2>
             <form id="frmregistro" class="cont">
-                <label class="" id="lbl1">Nombre: </label>
+                <label class="lbl" id="lbl1">Nombre: </label>
                 <input type="text" id="txt" class="txt" autocomplete="off">
                 <input type="text" id="apellidos" placeholder="Apellidos" autocomplete="off">
                 <br>
@@ -37,11 +39,11 @@
                 <input type="text" id="direccion" placeholder="Dirección" autocomplete="off">
                 <br>
                 <select name="" id="pregunta">
-                    <option value="1">¿Cuál es el nombre de tu madre?</option>
-                    <option value="2">¿Cuál fue el nombre de tu primera mascota?</option>
-                    <option value="3">¿Cuál fue el nombre de tu mejor amigo de la infancia?</option>
-                    <option value="4">¿Cuál es tu comida favorita?</option>
-                    <option value="5">¿Cuál es tu deporte favorito?</option>
+                    <option value="0">¿Cuál es el nombre de tu madre?</option>
+                    <option value="1">¿Cuál fue el nombre de tu primera mascota?</option>
+                    <option value="2">¿Cuál fue el nombre de tu mejor amigo de la infancia?</option>
+                    <option value="3">¿Cuál es tu comida favorita?</option>
+                    <option value="4">¿Cuál es tu deporte favorito?</option>
                 </select>
                 <input type="text" id="respuesta" placeholder="Respuesta" autocomplete="off">
                 <br>
