@@ -12,8 +12,7 @@
         inputs[i].addEventListener('blur', function () {
             if (inputs[i].value.length > 0) {
                 console.log('cant delete')
-            }
-            else {
+            } else {
                 labels[i].classList.remove('active', 'stay');
             }
         })
