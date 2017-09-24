@@ -2,7 +2,8 @@
     var li  = document.querySelectorAll('#blqMen li');
     var obj;
 
-  
+    
+    console.log(Teemo);
 
     // for(var i = 0; i < li.length; i++){
     //     li[i].addEventListener('click',function(){  
