@@ -8,81 +8,101 @@
 /* Inicio datos vista */
 body{
     font-family: 'Roboto',sans-serif;
+    padding: 0;
+    margin: 0;
+    
 }
 .btnMenu{
+    top:    0;
+  position: relative;
     display: none;
     padding: 20px;
-    background: #3f51b5;
+    background: #3e50b4;
     color: #fff;
 }
 .bar-menu{
-    min-width: 300px;
-    display: inline-block;
     font-family: sans-serif;
-    position:fixed;
-    
-    overflow:auto;
 }
-.menu-contenedor{
-    height:100%;
-    width:20%;
-    min-width: 300px;
-    display: inline-block;
+.barra-lateral{
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    background: #fafafa;
+    color: #fff;
+    border-right: 1px solid black;
+  
+}
+.barra-lateral .cabera-menu{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background: #008975;
+}
+.barra-lateral ul{
+    list-style: none;
     
-    background:#eeeeee ;
-    position:fixed;
-    overflow:auto;
 }
 
-.menu-contenedor .menu-bloque{
+.barra-lateral a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.barra-lateral li{
+  
+   transition: border 0.2s;
+ }
+ 
+.barra-lateral li:hover{
+ 
+   border-left: 5px solid hsl(157, 72%, 31%);
+}
+.barra-lateral li a:hover{
+    background: #00bf9a;
+    color: #fff;
+   
+ }
+ 
+
+/* Contenido */
+.contenido{
+   
+
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    padding: 30px;
+    margin-left: 20%;
+    transition: all 0.3s;
+    background: #fafafa;
+    box-sizing: border-box;
+    
+}
+
+.btn-bar{
+    cursor: pointer;
+}
+.cont-Father{
     width: 100%;
 }
-.menu-contenedor ul{
-    list-style: none;
-}
-.menu-contenedor .menu-bloque li a{
-    color: #212121;
-    display: block;
-    padding: 15px 20px;
-}
-.html-cont{
-    display: block;
-}
-.menu-contenedor .menu-bloque li a:hover{
-    -moz-transition-delay: 0.1s;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-    background: #d1c4e9 ;
-    color: #212121;
-}
-/* Ocultar ul */
-.menu-contenedor .menu-bloque ul{
-    display: none;
-}
 
-.menu-contenedor .menu-bloque ul li a{
-    background: #fafafa;
-}
-.body{
-    background: rgb(243, 242, 231);
-    font-family: sans-serif;
-}
-a{
-    text-align: none;   
-    text-decoration: none;
-    color: white;
-}
-.menu-contenedor .menu-bloque .activado > ul{
-    background:#eeeeee;
-    color: #212121;
-    display: block;
-}
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 450px){
-    body{
-        padding-top: 80px;
-    }
+   
     .bar-menu{
         margin: 0;
         width: 100%;
@@ -90,18 +110,15 @@ a{
         top: 0;
         z-index: 1000;
     }
-    .menu-contenedor{
-        margin: 0;
-        width: 100%;
-        display: none;
-        position: fixed;
-        top : 1px;
-    }
-    .act-menu{
-        display: block;
-    }
+   
     .btnMenu {
         display: block;
+    }
+    .contenido{
+        display: none;
+    }
+    .barra-lateral{
+        display: none;
     }
 }
 /* fin de vista */
