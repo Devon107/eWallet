@@ -32,7 +32,7 @@
                 <label class="lbl" id="lbl4">Contraseña: </label>
                 <input type="password" id="pass" class="txt" autocomplete="off">
                 <br>
-                <label class="lbl" id="lbl4">Repetir contraseña: </label>
+                <label class="lbl" id="lbl5">Repetir contraseña: </label>
                 <input type="password" id="pass2" class="txt" autocomplete="off">
                 <br>
                 <select id="departamento">
@@ -56,7 +56,8 @@
                     <option value="default">Municipio</option>
                 </select>
                 <br>
-                <input type="text" id="direccion" placeholder="Dirección" autocomplete="off">
+                <label class="lbl" id="lbl6">Dirección: </label>
+                <input type="text" id="direccion" class="txt" autocomplete="off">
                 <br>
                 <select name="" id="pregunta">
                     <option value="0">¿Cuál es el nombre de tu madre?</option>
@@ -65,12 +66,17 @@
                     <option value="3">¿Cuál es tu comida favorita?</option>
                     <option value="4">¿Cuál es tu deporte favorito?</option>
                 </select>
-                <input type="text" id="respuesta" placeholder="Respuesta" autocomplete="off">
                 <br>
-                <input type="text" id="dui" placeholder="Dui">
-                <input type="text" id="nit" placeholder="NIT">
+                <label class="lbl" id="lbl7">Respuesta: </label>
+                <input type="text" id="respuesta" class="txt" autocomplete="off">
                 <br>
-                <input type="text" placeholder="Número celular">
+                <label class="lbl" id="lbl8">Dui: </label>
+                <input type="text" id="dui" class="txt" autocomplete="off">
+                <label class="lbl" id="lbl9">Nit: </label>
+                <input type="text" id="nit" class="txt" autocomplete="off">
+                <br>
+                <label class="lbl" id="lbl10">Número celular: </label>
+                <input type="text" id="celular" class="txt" autocomplete="off">
                 <br>
                 <select name="mes" id="mes">
                     <option value="default">Mes de nacimiento</option>
@@ -78,7 +84,9 @@
                 <select name="annio" id="annio">
                     <option value="default">Día de nacimiento</option>
                 </select>
-                <input type="text" placeholder="Año de nacimiento">
+                <br>
+                <label class="lbl" id="lbl11">Año de nacimiento: </label>
+                <input type="text" id="a_nacimiento" class="txt" autocomplete="off">
                 <br>
                 <input type="button" value="Enviar datos"> </section>
         </form>
