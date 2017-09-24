@@ -8,11 +8,6 @@ var Teemo = {
         
         for (var name in opciones) elemento[name] = opciones[name];
         return elemento;
-    },
-    click: function(){
-        if(this.addEventLister){
-            console.log(this.eve);
-        }
     }
 }
 //alias
