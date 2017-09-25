@@ -28,6 +28,8 @@ var municipios = [ /*Ahuachapán*/
                   /*Usulután*/
     ["Alegría", "Berlín", "California", "Concepción Batres", "El Triunfo", "Ereguayquín", "Estanzuelas", "Jiquilisco", "Jucuapa", "Jucuarán", "Mercedes Umaña", "Nueva Granada", "Ozatlán", "Puerto El Triunfo", "San Agustín", "San Buenaventura", "San Dionisio", "San Francisco Javier", "Santa Elena", "Santa María", "Santiago de María", "Tecapán", "Usulután"]];
 
+var expresiones = [ /*Solo letras 0*/ /^([A-Z]|\s)+$/i, /*e-Mail 1*/ /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i];
+
 
 function iniciar() {
     var dpto = document.getElementById("departamento");
@@ -35,7 +37,59 @@ function iniciar() {
         var departamento = dpto.value;
         llenar_municipios(departamento, document.getElementById("municipio"));
     })
+
+    var contra1 = document.getElementById("pass");
+    var contra2 = document.getElementById("pass2");
+
+    contra2.addEventListener("keyup", function () {
+        var a = contra1.value;
+        var b = contra2.value;
+        validar_contra(a, b)
+    })
+
+    var nombre = document.getElementById("nombres");
+    nombre.addEventListener("keyup", function () {
+        validar_nombre(nombre.value, expresiones[0]);
+    })
+
+    var correo = document.getElementById("email");
+    correo.addEventListener("keyup", function () {
+        validar_correo(correo.value, expresiones[1]);
+    })
 }
+
+/*Validaciones*/
+function validar_nombre(valor, exp) {
+    var label = document.getElementById("lbl1");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Solo se permiten letras";
+    } else {
+        label.innerHTML = "Nombres: ";
+    }
+}
+
+function validar_contra(contra1, contra2) {
+    var label = document.getElementById("lbl5");
+    if (contra2 != contra1) {
+        label.innerHTML = "Las contraseñas no coinciden";
+        label.style.color = "red";
+
+    } else {
+        label.innerHTML = "Las contraseñas coinciden";
+        label.style.color = "green";
+    }
+}
+
+function validar_correo(valor, exp) {
+    var label = document.getElementById("lbl3");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Ingrese un e-mail válido";
+    } else {
+        label.innerHTML = "e-Mail: ";
+    }
+}
+
+/*Llenado de Select*/
 
 function quitar_municipios(menu_municipios) {
     for (var i = 0; i < menu_municipios.options.length; i++) {
