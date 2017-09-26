@@ -42,9 +42,31 @@ var expresiones = [ /*Solo letras 0*/
 /^([76]\d{3}-?\d{4}|\+?503[76]\d{7})$/];
 
 var validarfinal = [];
+var datos = [];
 
+/*Objeto*/
+function Cliente() {
+    this.nombres = "";
+    this.apellidos = "";
+    this.email = "";
+    this.contrasena = "";
+    this.direccion = "";
+    this.pregunta = "";
+    this.respuesta = "";
+    this.dui = "";
+    this.nit = "";
+    this.telefono = "";
+    this.fnacimiento = "";
+}
+
+var nuevocliente = new Cliente();
 
 function iniciar() {
+    var dias = document.getElementById("dia");
+    for (i = 0; i < 31; i++) {
+        dias[i] = new Option(parseInt(i + 1), parseInt(i + 1));
+    }
+
     var dpto = document.getElementById("departamento");
     dpto.addEventListener("change", function () {
         var departamento = dpto.value;
@@ -91,10 +113,10 @@ function iniciar() {
     telefono.addEventListener("keyup", function () {
         validar_telefono(telefono.value, expresiones[5]);
     })
-    
+
     var boton_enviar = document.getElementById("enviar");
-    boton_enviar.addEventListener("click", function(){
-        introducir_campos
+    boton_enviar.addEventListener("click", function () {
+        introducir_campos();
     })
 }
 
@@ -107,6 +129,7 @@ function validar_nombre(valor, exp) {
     } else {
         label.innerHTML = "Nombres: ";
         validarfinal[0] = true;
+        datos[0] = valor;
     }
 }
 
@@ -118,6 +141,7 @@ function validar_apellido(valor, exp) {
     } else {
         label.innerHTML = "Apellidos: ";
         validarfinal[1] = true;
+        datos[1] = valor;
     }
 }
 
@@ -129,6 +153,7 @@ function validar_correo(valor, exp) {
     } else {
         label.innerHTML = "e-Mail: ";
         validarfinal[2] = true;
+        datos[2] = valor;
     }
 }
 
@@ -152,6 +177,7 @@ function validar_contra2(contra1, contra2) {
     } else {
         label.innerHTML = "Las contraseñas coinciden";
         validarfinal[4] = true;
+        datos[3] = contra2;
     }
 }
 
@@ -164,6 +190,7 @@ function validar_dui(valor, exp) {
     } else {
         label.innerHTML = "Dui:"
         validarfinal[5] = true;
+        datos[7] = valor;
     }
 }
 
@@ -175,6 +202,7 @@ function validar_nit(valor, exp) {
     } else {
         label.innerHTML = "NIT: "
         validarfinal[6] = true;
+        datos[8] = valor;
     }
 }
 
@@ -186,7 +214,37 @@ function validar_telefono(valor, exp) {
     } else {
         label.innerHTML = "Teléfono: "
         validarfinal[7] = true;
+        datos[9] = valor;
     }
+}
+
+function introducir_campos() {
+    var dpto = document.getElementById("departamento").value;
+    var mun = document.getElementById("municipio").value;
+    var dir = document.getElementById("direccion").value;
+    var dia = document.getElementById("dia").value;
+    var mes = document.getElementById("mes").value;
+    var annio = document.getElementById("a_nacimiento").value;
+    datos[4] = dpto + ", " + mun + ", " + dir;
+    datos[5] = document.getElementById("pregunta").value;
+    datos[6] = document.getElementById("respuesta").value;
+    datos[10] = dia + " de " + mes + " del " + annio;
+    nuevocliente.nombres = datos[0];
+    nuevocliente.apellidos = datos[1];
+    nuevocliente.email = datos[2];
+    nuevocliente.contrasena = datos[3];
+    nuevocliente.direccion = datos[4];
+    nuevocliente.pregunta = datos[5];
+    nuevocliente.respuesta = datos[6];
+    nuevocliente.dui = datos[7];
+    nuevocliente.nit = datos[8];
+    nuevocliente.telefono = datos[9];
+    nuevocliente.fnacimiento = datos[10];
+
+    for (var i = 0; i <= 10; i++) {
+        document.write(datos[i] + "<br><br>");
+    }
+
 }
 
 /*Llenado de Select*/
