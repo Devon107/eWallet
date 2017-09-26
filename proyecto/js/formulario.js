@@ -28,7 +28,20 @@ var municipios = [ /*Ahuachapán*/
                   /*Usulután*/
     ["Alegría", "Berlín", "California", "Concepción Batres", "El Triunfo", "Ereguayquín", "Estanzuelas", "Jiquilisco", "Jucuapa", "Jucuarán", "Mercedes Umaña", "Nueva Granada", "Ozatlán", "Puerto El Triunfo", "San Agustín", "San Buenaventura", "San Dionisio", "San Francisco Javier", "Santa Elena", "Santa María", "Santiago de María", "Tecapán", "Usulután"]];
 
-var expresiones = [ /*Solo letras 0*/ /^([A-Z]|\s)+$/i, /*e-Mail 1*/ /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i];
+var expresiones = [ /*Solo letras 0*/
+    /^([A-Z]|\s)+$/i,
+                   /*e-Mail 1*/
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                  /*Contraseña*/
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\.@$!%*?&])([A-Za-z\d$@$!%*?&]|[\S]){8,}$/,
+                  /*Dui*/
+    /^[0-9]{8}-?[0-9]$/,
+                  /*NIT*/
+    /^(\d{4}-\d{6}-\d{3}-\d{1}|\d{14})$/,
+/*Telefono 5*/
+/^([76]\d{3}-?\d{4}|\+?503[76]\d{7})$/];
+
+var validarfinal = [];
 
 
 function iniciar() {
@@ -41,10 +54,14 @@ function iniciar() {
     var contra1 = document.getElementById("pass");
     var contra2 = document.getElementById("pass2");
 
+    contra1.addEventListener("keyup", function () {
+        validar_contra(contra1.value, expresiones[2]);
+    })
+
     contra2.addEventListener("keyup", function () {
         var a = contra1.value;
         var b = contra2.value;
-        validar_contra(a, b)
+        validar_contra2(a, b)
     })
 
     var nombre = document.getElementById("nombres");
@@ -52,9 +69,32 @@ function iniciar() {
         validar_nombre(nombre.value, expresiones[0]);
     })
 
+    var apellido = document.getElementById("apellidos");
+    apellido.addEventListener("keyup", function () {
+        validar_apellido(apellido.value, expresiones[0]);
+    })
+
     var correo = document.getElementById("email");
     correo.addEventListener("keyup", function () {
         validar_correo(correo.value, expresiones[1]);
+    })
+    var dui = document.getElementById("dui");
+    dui.addEventListener("keyup", function () {
+        validar_dui(dui.value, expresiones[3]);
+    })
+
+    var nit = document.getElementById("nit");
+    nit.addEventListener("keyup", function () {
+        validar_nit(nit.value, expresiones[4])
+    })
+    var telefono = document.getElementById("celular");
+    telefono.addEventListener("keyup", function () {
+        validar_telefono(telefono.value, expresiones[5]);
+    })
+    
+    var boton_enviar = document.getElementById("enviar");
+    boton_enviar.addEventListener("click", function(){
+        introducir_campos
     })
 }
 
@@ -63,20 +103,21 @@ function validar_nombre(valor, exp) {
     var label = document.getElementById("lbl1");
     if (exp.test(valor) !== true) {
         label.innerHTML = "Solo se permiten letras";
+        validarfinal[0] = false;
     } else {
         label.innerHTML = "Nombres: ";
+        validarfinal[0] = true;
     }
 }
 
-function validar_contra(contra1, contra2) {
-    var label = document.getElementById("lbl5");
-    if (contra2 != contra1) {
-        label.innerHTML = "Las contraseñas no coinciden";
-        label.style.color = "red";
-
+function validar_apellido(valor, exp) {
+    var label = document.getElementById("lbl2");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Solo se permiten letras";
+        validarfinal[1] = false;
     } else {
-        label.innerHTML = "Las contraseñas coinciden";
-        label.style.color = "green";
+        label.innerHTML = "Apellidos: ";
+        validarfinal[1] = true;
     }
 }
 
@@ -84,8 +125,67 @@ function validar_correo(valor, exp) {
     var label = document.getElementById("lbl3");
     if (exp.test(valor) !== true) {
         label.innerHTML = "Ingrese un e-mail válido";
+        validarfinal[2] = false;
     } else {
         label.innerHTML = "e-Mail: ";
+        validarfinal[2] = true;
+    }
+}
+
+function validar_contra(valor, exp) {
+    var label = document.getElementById("lbl4");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Contraseña débil o con espacios";
+        validarfinal[3] = false;
+    } else {
+        label.innerHTML = "Contraseña: ";
+        validarfinal[3] = true;
+    }
+}
+
+
+function validar_contra2(contra1, contra2) {
+    var label = document.getElementById("lbl5");
+    if (contra2 != contra1) {
+        label.innerHTML = "Las contraseñas no coinciden";
+        validarfinal[4] = false;
+    } else {
+        label.innerHTML = "Las contraseñas coinciden";
+        validarfinal[4] = true;
+    }
+}
+
+
+function validar_dui(valor, exp) {
+    var label = document.getElementById("lbl8");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Ingrese un DUI válido";
+        validarfinal[5] = false;
+    } else {
+        label.innerHTML = "Dui:"
+        validarfinal[5] = true;
+    }
+}
+
+function validar_nit(valor, exp) {
+    var label = document.getElementById("lbl9");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Ingrese un NIT válido";
+        validarfinal[6] = false;
+    } else {
+        label.innerHTML = "NIT: "
+        validarfinal[6] = true;
+    }
+}
+
+function validar_telefono(valor, exp) {
+    var label = document.getElementById("lbl10");
+    if (exp.test(valor) !== true) {
+        label.innerHTML = "Ingrese un teléfono celular válido";
+        validarfinal[7] = false;
+    } else {
+        label.innerHTML = "Teléfono: "
+        validarfinal[7] = true;
     }
 }
 

@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>e-Wallet</title>
     <link rel="stylesheet" href="../css/estilo.css"> </head>
-    <script type="text/javascript" src="../js/formulario.js"></script>
+<script type="text/javascript" src="../js/formulario.js"></script>
+
 <body>
     <header>
         <section id="header">
@@ -31,6 +32,7 @@
                 <label class="lbl" id="lbl5">Repetir contraseña: </label>
                 <input type="password" id="pass2" class="txt" autocomplete="off">
                 <br>
+                <br>
                 <select id="departamento">
                     <option value="default">Departamento</option>
                     <option value="ahuachapan">Ahuachapán</option>
@@ -54,7 +56,7 @@
                 <br>
                 <label class="lbl" id="lbl6">Dirección: </label>
                 <input type="text" id="direccion" class="txt" autocomplete="off">
-                <br>
+                <br><br><br>
                 <select name="" id="pregunta">
                     <option value="0">¿Cuál es el nombre de tu madre?</option>
                     <option value="1">¿Cuál fue el nombre de tu primera mascota?</option>
@@ -73,7 +75,7 @@
                 <br>
                 <label class="lbl" id="lbl10">Número celular: </label>
                 <input type="text" id="celular" class="txt" autocomplete="off">
-                <br>
+                <br><br><br>
                 <select name="mes" id="mes">
                     <option value="default">Mes de nacimiento</option>
                 </select>
@@ -82,10 +84,12 @@
                 </select>
                 <br>
                 <label class="lbl" id="lbl11">Año de nacimiento: </label>
-                <input type="text" id="a_nacimiento" class="txt" autocomplete="off">
-                <br>
-                <input type="button" value="Enviar datos"> </section>
-        </form>
+                <input type="text" id="a_nacimiento" class="txt" autocomplete="off" maxlength="4">
+                
+                <input type="button" value="Enviar datos" id="enviar">
+            </form>
+        </section>
+
     </section>
 </body>
 <script src="../js/estilo.js"></script>
