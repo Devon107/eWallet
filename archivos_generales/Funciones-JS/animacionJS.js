@@ -34,7 +34,7 @@
         }
     })
     
-    
+
 
     var inputs = document.getElementsByClassName('txt');
     var labels = document.getElementsByClassName("lbl");
