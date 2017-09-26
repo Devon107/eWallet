@@ -323,9 +323,29 @@ a{text-decoration: none}
         display: inline;
     }
 }
+/* tarjeta */
+.tarjeta{
+    width: 80%;
+    margin: auto;
+}
 
 
-
+/* imgs Estilos generales */
+.imgDoc{
+    width: 100%;
+    height: auto;
+}
+/* Cuentas - Mostrar Dinero */
+.mostrarDinero{
+   width: 20%;
+   margin: auto;
+   margin-top: 10%;
+}
+.mostrarDinero span{
+    width: 100%;
+    margin: auto;
+ }
+ 
 
 
 
