@@ -1,8 +1,12 @@
-var banderaReg = 0;
-
+var banderaReg = 0, banderaSesion = 0;
+var cont = document.getElementsByTagName('body')[0];
+var htmlRegistro = "";
+var htmlLogin = "";
+var htmlIndex = "";
 $('btnReg').addEventListener('click',()=>{
-    var cont = document.getElementsByTagName('body')[0];
-    var htmlRegistro = "";
+  
+    
+  
     banderaReg = 1;
 
     htmlRegistro+=" <header>";
@@ -108,14 +112,174 @@ $('btnReg').addEventListener('click',()=>{
     htmlRegistro+="                </ul>";
     htmlRegistro+="                <span>eWallet R&L ©</span>";
     htmlRegistro+="            </div>";
- 
+    
+
+   
+    
+
    
     if(banderaReg){
         cont.innerHTML = "";
         cont.innerHTML = htmlRegistro;
         cargarRegistro();
+    }else{
+        banderaReg = 0;
     }
   
+});
+// $('btnRegresar').addEventListener("click",function () {
+//      console.log(cont);
+//     //Inicia  Sesion
+//     banderaSesion = 1;
+//       var htmlVista = "";
+//      // html Vista
+//      htmlVista +="<div class='bar-menu' id='btnMenu'>";
+//      htmlVista +="        <a  class='btnMenu'>Menú <i class='fa fa-bars fa-2x btn-bar'></i></a>";
+//      htmlVista +="    </div>";
+//      htmlVista +="    <div class='cont-Father'>";
+//      htmlVista +="            <div class='barra-lateral'>";
+//      htmlVista +="                    <div class='cabera-menu'>";
+//      htmlVista +="                        <img src='../img/logo.png' class='logo'>";
+//      htmlVista +="                    </div>";
+//      htmlVista +="                    <ul>";
+//      htmlVista +="                        <li id='liOp'><a>Cuentas</a>";
+//      htmlVista +="                            <ul id='liD' class='des'>";
+//      htmlVista +="                                <li><a href='#'>Efectivo</a></li>";
+//      htmlVista +="                                <li><a href='#'>Cuentas</a></li>";
+//      htmlVista +="                                <li><a href='#'>Tarjetas de Crédito</a></li>";
+//      htmlVista +="                            </ul>";
+//      htmlVista +="                        </li>";
+//       htmlVista +="                       <li><a>Ingresos</a></li>";
+//       htmlVista +="                       <li><a>Gastos</a></li>";
+//      htmlVista +="                        <li><a>Configuraciones Generales</a></li>";
+//      htmlVista +="                        <li><a>Estadísticas</a></li>";
+//      htmlVista +="                    </ul>";
+//      htmlVista +="                </div>";
+//      htmlVista +="                <div class='contenido ' id='contenido'>";
+//      htmlVista +="                   <div class='info'>";
+//      htmlVista +="                        <section class='mostrarDinero'>";
+//      htmlVista +="                            <section class='tarjeta'>";
+//      htmlVista +="                                <span class='MostrarDatos'>Dinero Actual:</span>";
+//      htmlVista +="                                <section>";
+//      htmlVista +="                                    <img src='../../archivos_generales/img/dineroActual.png' class='imgDoc'>";
+//      htmlVista +="                                </section>";
+//      htmlVista +="                                <span class='MostrarDatos Dinero'>$ 0.000</span>";
+//      htmlVista +="                            </section>";
+//      htmlVista +="                        </section>";
+//      htmlVista +="                        <br><br><br><br><br><br><br><br><br><br><br><br><br>";
+//      htmlVista +="                   </div>";
+//       htmlVista +="               <div class='footer'>";
+//       htmlVista +="                   <h4>eWallet</h4>";
+//      htmlVista +="                    <ul>";
+//      htmlVista +="                        <li><a href='#'>Enlace</a></li>";
+//      htmlVista +="                        <li><a href='#'>Enlace</a></li>";
+//      htmlVista +="                        <li><a href='#'>Enlace</a></li>";
+//      htmlVista +="                        <li><a href='#'>Enlace</a></li>";
+//      htmlVista +="                    </ul>";
+//      htmlVista +="                    <span>eWallet R&L ©</span>";
+//      htmlVista +="                </div>";
+//      htmlVista +="            </div>";
+//      htmlVista +="        </div> ";
+      
+//     if(banderaSesion){
+//         cont.innerHTML ="";
+//         cont.innerHTML = htmlVista;
+//     }
+// })
+
+$('btnLog').addEventListener("click", function () {
+    console.log('teemo')
+    var banderaSesion = 0;
+   
+    // Boton para regresar
+
+
+    banderaSesion = 1;
+     htmlLogin += ' <div class="bar-Men">';
+     htmlLogin += '    <div class="mostrar"><a class="btnMenuBar">eWallet ';
+     htmlLogin += '        </a></div>  ';
+     htmlLogin += '    <div class="botonBar">';
+     htmlLogin += '        <a ><i class="fa fa-bars" aria-hidden="true"></i></a>';
+     htmlLogin += '    </div>';
+     htmlLogin += '    <div class="horizontal-menu mostrar">';
+     htmlLogin += '        <ul>';
+     htmlLogin += '            <li><a href="#" id="btnRegresar">Regresar</a></li>';
+     htmlLogin += '        </ul>';
+     htmlLogin += '    </div>';
+     htmlLogin += '</div><br><br><br><br><br><br><br><br> ';
+    htmlLogin += '<section id="login">';
+    htmlLogin += '<h2>Iniciar sesion</h2>';
+    htmlLogin += '<form id="frmlogin" class="cont">';
+    htmlLogin += ' <label class="lbl">Correo electrónico</label>';
+    htmlLogin += '<input type="text" class="txt" name="correo">';
+
+    htmlLogin += '<label class="lbl">Contraseña</label>';
+    htmlLogin += '<input type="text" class="txt" name="contra">';
+    htmlLogin += ' <br>';
+    htmlLogin += '  <input type="button" value="Iniciar sesion" id="iniciar_sesion">';
+    htmlLogin += '  </form>';
+    htmlLogin += '</section>';
+
+        var btnRegresar = document.getElementById("btnRegresar");
+
+    if (banderaSesion) {
+        cont.innerHTML = "";
+        cont.innerHTML = htmlLogin;
+        cargarRegistro();       
+         btnRegresar.addEventListener("click",function () {
+        
+
+htmlIndex +='     <div class="bar-Men">';
+htmlIndex +='           <div class="mostrar"><a class="btnMenuBar">eWallet ';
+htmlIndex +='               </a></div>  ';
+htmlIndex +='           <div class="botonBar">';
+htmlIndex +='               <a ><i class="fa fa-bars" aria-hidden="true"></i></a>';
+htmlIndex +='           </div>';
+htmlIndex +='           <div class="horizontal-menu mostrar">';
+htmlIndex +='               <ul>';
+htmlIndex +='                   <li><a href="#" id="btnLog">Iniciar Sesión</a></li>';
+htmlIndex +='                   <li><a href="#" id="btnReg">Registrarse</a></li>';
+htmlIndex +='               </ul>';
+htmlIndex +='           </div>';
+htmlIndex +='       </div> ';
+htmlIndex +='           <div id="indexInfo">';
+htmlIndex +='                       <div class="p1">';
+htmlIndex +='                           <h2>A solo un click!</h2><br><br>';
+htmlIndex +='                           <p >';
+htmlIndex +='                                Mi presupuesto no es un bloc de cuentas corriente. Con esta app tendrá a la vista sus ingresos y gastos y podrá administrar mejor el dinero que tenga. <br><br>';
+htmlIndex +='                                VENTAJAS CON RESPECTO A OTRAS APP<br><br><br>';
+htmlIndex +='                                ES ECONÓMICO. Al contrario que otras app el precio se mantiene superbajo y se ha desarrollado como app universal.';
+htmlIndex +='                                Es decir, no pagará una vez por una versión para iPad y otra vez por una versión para iPhone. ';
+htmlIndex +='                                En cuanto al conjunto de funciones está aplicación no tiene nada que envidiar a otras app más caras. Convénzase del gran rango de sus funciones.';
+htmlIndex +='                                Desarrollamos la app permanentemente. Escuchamos gustosos sus deseos y sugerencias e intentamos tenerlas en cuenta.<br><br>';
+htmlIndex +='                                ES SIMPLE. Un bloc de cuentas debería ser claro y sencillo de usar, de lo contrario uno pierde las ganas de usarlo rápidamente y el control de su situación financiera. ';
+htmlIndex +='                                Con esta app tendrá a la vista sus ingresos y gastos y podrá así administrar mejor el dinero que tenga. Muchas app comparables están sobrecargadas y son liosas.';
+htmlIndex +='                                Esta app aspira a hacerlo más sencillo y mejor.<br><br>';
+htmlIndex +='                                ES ESTRUCTURADA. No se deje engañar por apariencias simples y bonitas. La apariencia se ha pretendido mantener sencilla';
+htmlIndex +='                                y ofrece todas las funciones que necesita para la planificación y administración de sus finanzas. Entre ellas se ';
+htmlIndex +='                                cuentan diagramas e informes muy expresivos. En el resumen tendrá todas las cifras necesarias bajo control. No se ';
+htmlIndex +='                                puede representar de forma más sencilla la situación financiera a lo largo de los meses.<br><br><br>';
+htmlIndex +='                             </p> ';
+htmlIndex +='                         </div>';
+htmlIndex +='                    </div>';
+htmlIndex +='             <div class="footer">';
+htmlIndex +='                 <h4>eWallet</h4>';
+htmlIndex +='                 <ul>';
+htmlIndex +='                     <li><a href="#">Enlace</a></li>';
+htmlIndex +='                     <li><a href="#">Enlace</a></li>';
+htmlIndex +='                     <li><a href="#">Enlace</a></li>';
+htmlIndex +='                     <li><a href="#">Enlace</a></li>';
+htmlIndex +='                 </ul>';
+htmlIndex +='                 <span>eWallet R&L ©</span>';
+htmlIndex +='             </div>';
+htmlIndex +='     </div>';
+htmlIndex +='        </div>';
+
+    cont.innerHTML = "";
+    cont.innerHTML = htmlIndex;
+    })
+    }
 
    
 })
+
