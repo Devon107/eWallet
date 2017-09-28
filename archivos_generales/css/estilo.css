@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
@@ -7,27 +7,24 @@
 }
 
 /* Inicio datos vista */
-body{
-    font-family: 'Roboto',sans-serif;
+
+body {
+    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-    height: 100%;    
+    height: 100%;
 }
 
-.btnMenu{
-    top:    0;
-  position: relative;
+.btnMenu {
+    top: 0;
+    position: relative;
     display: none;
     padding: 20px;
     background: #3e50b4;
     color: #fff;
 }
 
-.bar-menu{
-    font-family: sans-serif;
-}
-
-.barra-lateral{
+.barra-lateral {
     position: fixed;
     width: 20%;
     height: 100%;
@@ -35,61 +32,63 @@ body{
     color: #fff;
 }
 
-.barra-lateral .cabera-menu{
+.barra-lateral .cabera-menu {
     text-align: center;
     width: 100%;
     padding: 10px;
     background: #f5f5f5;
 }
 
-.barra-lateral ul{
+.barra-lateral ul {
     list-style: none;
 }
 
-.barra-lateral a{
+.barra-lateral a {
     display: block;
     color: #000;
     text-decoration: none;
     padding: 10px;
 }
 
-.barra-lateral li a{
-   transition: border 0.2s;
- }
-
- #liD{
-     margin-left: 5%;
- }
-
-.barra-lateral li a:hover{
-   border-left: 5px solid #212121;
+.barra-lateral li a {
+    transition: border 0.2s;
 }
 
-.barra-lateral li a:hover{
+#liD {
+    margin-left: 5%;
+}
+
+.barra-lateral li a:hover {
+    border-left: 5px solid #212121;
+}
+
+.barra-lateral li a:hover {
     background: #fafafa;
     color: #000;
- }
+}
 
-.des{
+.des {
     display: none;
 }
 
-.act{
+.act {
     display: block;
 }
 
- /**
+/**
   *logo
   */
- .logo{
-     width: 120px;
-     height: 100px;
- }
+
+.logo {
+    width: 120px;
+    height: 100px;
+}
 
 /**
  *Contenido 
  */
-.contenido{
+
+.contenido {
     width: 80%;
     height: 100%;
     overflow: auto;
@@ -98,10 +97,11 @@ body{
     transition: all 0.3s;
     background: #FDFDFD;
     box-sizing: border-box;
-    -webkit-box-shadow: -1px 0px 2px -1px rgba(0,0,0,0.45);
-    -moz-box-shadow: -1px 0px 2px -1px rgba(0,0,0,0.45);
-    box-shadow: -1px 0px 2px -1px rgba(0,0,0,0.45);
+    -webkit-box-shadow: -1px 0px 2px -1px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: -1px 0px 2px -1px rgba(0, 0, 0, 0.45);
+    box-shadow: -1px 0px 2px -1px rgba(0, 0, 0, 0.45);
 }
+
 #indexConte {
     width: 100%;
     height: 100%;
@@ -111,72 +111,82 @@ body{
     transition: all 0.3s;
     background: #FDFDFD;
     box-sizing: border-box;
-    -webkit-box-shadow: -1px 0px 2px -1px rgba(0,0,0,0.45);
-    -moz-box-shadow: -1px 0px 2px -1px rgba(0,0,0,0.45);
-    box-shadow: -1px 0px 2px -1px rgba(0,0,0,0.45);
+    -webkit-box-shadow: -1px 0px 2px -1px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: -1px 0px 2px -1px rgba(0, 0, 0, 0.45);
+    box-shadow: -1px 0px 2px -1px rgba(0, 0, 0, 0.45);
 }
-.contenido .info{
+
+.contenido .info {
     padding: 30px
 }
 
-.btn-bar{
+.btn-bar {
     cursor: pointer;
 }
-.cont-Father{
+
+.cont-Father {
     width: 100%;
 }
- #indexInfo{
+
+#indexInfo {
     padding: 30px;
     padding-top: 100px;
-    width:100%;
+    width: 100%;
 }
-#top-menu{
+
+#top-menu {
     width: 100%;
     position: fixed;
     background: #3e50b4;
     height: auto;
 }
-#top-menu span{
-   position: absolute;
-   padding: 5px;
-   left: 6%;
-   color: #fff;
-   font-size: 25px;
+
+#top-menu span {
+    position: absolute;
+    padding: 5px;
+    left: 6%;
+    color: #fff;
+    font-size: 25px;
 
 }
 
-.bloque{
+.bloque {
     position: relative;
     display: inline-flex;
     left: 60%;
 }
-.bloque li{
+
+.bloque li {
     width: 100%;
-   
+
 }
-.bloque li a{
+
+.bloque li a {
     display: block;
     color: #fff;
     height: 100%;
     font-size: 25px;
 }
-.bloque li a:hover{
+
+.bloque li a:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     font-size: 25px;
     transition: all .5s;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
 
-  /**
+/**
    * Footer Styles
    */
-  
+
 .footer {
     position: absolute;
     padding: 1rem;
@@ -185,47 +195,43 @@ li{
     background-color: #212121;
     text-align: center;
 }
-.footer h4{
+
+.footer h4 {
     color: #fff;
 }
-.footer ul{
+
+.footer ul {
     list-style: none;
 }
-.footer a{
+
+.footer a {
     color: #fff;
     text-decoration: none;
 }
 
 
-p{
+p {
     text-align: justify;
-   
-}
-.p1{
-   width: 45%;
-   height: 30%;
+
 }
 
+.p1 {
+    width: 45%;
+    height: 30%;
+}
 
-
-
-
-.tabla{
+.tabla {
     position: relative;
 }
-.bar-Men{
+
+.bar-Men {
     position: fixed;
     width: 100%;
-    background-color: #303f9f;
-    -webkit-box-shadow: 6px 3px 5px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 3px 5px -3px rgba(0,0,0,0.75);
-    box-shadow: 6px 3px 5px -3px rgba(248, 59, 59, 0.45);
+    background-color: #66bb6a;
     height: 10%;
-    display: inline-block;
-    overflow: hidden;
-    min-height: 15px;
 }
-.btnMenuBar{
+
+#btnIndex {
     position: absolute;
     left: 0%;
     padding: 15px;
@@ -235,117 +241,136 @@ p{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     display: inline-block;
-    font-size: 30px;    
+    font-size: 30px;
 }
 
-body{
-    font-family: 'Roboto',sans-serif;
+body {
+    font-family: 'Roboto', sans-serif;
 }
-a{text-decoration: none}
+
+a {
+    text-decoration: none
+}
+
 .horizontal-menu {
     position: absolute;
     right: 0%;
-    
+
 }
-.bar-Men .horizontal-menu{
+
+.bar-Men .horizontal-menu {
     height: 100%;
 }
-.horizontal-menu ul{
+
+.horizontal-menu ul {
     height: 100%;
 }
-.horizontal-menu  ul>li{
+
+.horizontal-menu ul > li {
     height: 100%;
     display: inline-block;
     list-style: none;
-    
+
 }
-.horizontal-menu  ul>li:hover{
-   background: #1a237e;
-   color: #fff;
+
+.horizontal-menu ul > li:hover {
+    background: #4caf50;
+    color: #fff;
 }
-.horizontal-menu li a{
-   
+
+.horizontal-menu li a {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     list-style: none;
     color: #fff;
     text-decoration: none;
     display: block;
-    height: 100%;
     padding: 20px;
 }
-.botonBar{
+
+.botonBar {
     display: none;
 }
-.botonBar > a{
+
+.botonBar > a {
     position: absolute;
     right: 0%;
     padding: 10px;
     margin: auto;
     color: #fff;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 30px;
 }
-.menuLateral{
+
+.menuLateral {
     position: relative;
     height: 100%;
-    top:10%;
+    top: 10%;
     width: 50%;
-    background: #e8eaf6 ;
-    display: none;   
+    background: #e8eaf6;
+    display: none;
 }
-.menuLateral .bloque{
+
+.menuLateral .bloque {
     width: 100%;
 }
-.menuLateral .bloque li a{
+
+.menuLateral .bloque li a {
     color: black;
     display: block;
     padding: 15px 20px;
 }
 
-.menuLateral .bloque li a:hover{
+.menuLateral .bloque li a:hover {
     -moz-transition-delay: 0.1s;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
-    background: #d1c4e9 ;
+    background: #d1c4e9;
     color: rgb(226, 27, 27);
 }
-@media screen and (max-width: 450px){
-    
-    .mostrar{
+
+@media screen and (max-width: 450px) {
+
+    .mostrar {
         display: none;
     }
-    .botonBar{
+    .botonBar {
         display: block;
     }
-    .menuLateral{
+    .menuLateral {
         position: fixed;
         display: inline;
     }
 }
+
 /* tarjeta */
-.tarjeta{
+
+.tarjeta {
     width: 80%;
     margin: auto;
 }
 
 
 /* imgs Estilos generales */
-.imgDoc{
+
+.imgDoc {
     width: 100%;
     height: auto;
 }
+
 /* Cuentas - Mostrar Dinero */
-.mostrarDinero{
-   width: 20%;
-   margin: auto;
-   margin-top: 10%;
+
+.mostrarDinero {
+    width: 20%;
+    margin: auto;
+    margin-top: 10%;
 }
-.mostrarDinero span{
+
+.mostrarDinero span {
     width: 100%;
     margin: auto;
- }
- 
+}
+
 
 
 
@@ -353,23 +378,16 @@ a{text-decoration: none}
   * Responsive 
   */
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
 
-    .bar-menu{
-        margin: 0;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-    }
-   
+
     .btnMenu {
         display: block;
     }
-    .contenido{
+    .contenido {
         display: none;
     }
-    .barra-lateral{
+    .barra-lateral {
         display: none;
     }
 }
