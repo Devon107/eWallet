@@ -219,6 +219,8 @@ function validar_telefono(valor, exp) {
 }
 
 function introducir_campos() {
+    var i1 = document.getElementById("pregunta").selectedIndex;
+    var sel_pregunta = document.getElementById("pregunta");
     var dpto = document.getElementById("departamento").value;
     var mun = document.getElementById("municipio").value;
     var dir = document.getElementById("direccion").value;
@@ -226,7 +228,7 @@ function introducir_campos() {
     var mes = document.getElementById("mes").value;
     var annio = document.getElementById("a_nacimiento").value;
     datos[4] = dpto + ", " + mun + ", " + dir;
-    datos[5] = document.getElementById("pregunta").value;
+    datos[5] = sel_pregunta.options[i1].text;
     datos[6] = document.getElementById("respuesta").value;
     datos[10] = dia + " de " + mes + " del " + annio;
     nuevocliente.nombres = datos[0];
@@ -241,9 +243,7 @@ function introducir_campos() {
     nuevocliente.telefono = datos[9];
     nuevocliente.fnacimiento = datos[10];
 
-    for (var i = 0; i <= 10; i++) {
-        document.write(datos[i] + "<br><br>");
-    }
+    alert("Datos ingresados");
 
 }
 

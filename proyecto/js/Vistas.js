@@ -49,7 +49,7 @@ var htmlVista = "";
     htmlRegistro += "           <label class='lbl' id='lbl6'>Dirección: </label>";
     htmlRegistro += "           <input type='text' id='direccion' class='txt' autocomplete='off'>";
     htmlRegistro += "           <br><br><br>";
-    htmlRegistro += "           <select name=' id='pregunta'>";
+    htmlRegistro += "           <select name='' id='pregunta'>";
     htmlRegistro += "               <option value='0'>¿Cuál es el nombre de tu madre?</option>";
     htmlRegistro += "               <option value='1'>¿Cuál fue el nombre de tu primera mascota?</option>";
     htmlRegistro += "               <option value='2'>¿Cuál fue el nombre de tu mejor amigo de la infancia?</option>";
@@ -155,9 +155,9 @@ htmlLogin += '<section id="login">';
 htmlLogin += '<h2>Iniciar sesion</h2>';
 htmlLogin += '<form id="frmlogin" class="cont">';
 htmlLogin += ' <label class="lbl">Correo electrónico</label>';
-htmlLogin += '<input type="text" class="txt" name="correo">';
+htmlLogin += '<input type="text" class="txt" name="correo" id="correo">';
 htmlLogin += '<label class="lbl">Contraseña</label>';
-htmlLogin += '<input type="text" class="txt" name="contra">';
+htmlLogin += '<input type="text" class="txt" name="contra" id="contra">';
 htmlLogin += ' <br>';
 htmlLogin += '  <input type="button" value="Iniciar sesion" id="iniciar_sesion">';
 htmlLogin += ' <br>';
@@ -200,6 +200,7 @@ boton_login.addEventListener("click",function(){
     contenedor.innerHTML = "";
     contenedor.innerHTML = htmlLogin;
     cargarEstilo();
+    iniciar_controles_login();
 })
 
 boton_index.addEventListener("click",function(){
