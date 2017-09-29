@@ -1,4 +1,4 @@
-window.addEventListener("load", iniciar, false);
+//window.addEventListener("load", iniciar, false);
 var municipios = [ /*Ahuachapán*/
         ["Ahuachapán", "Apaneca", "Atiquizaya", "Cocepción de ataco", "El refugio", "Guaymango", "Jujutla", "San Francisco Menendez", "San Lorenzo", "San Pedro Puxtla", "Tacuba", "Turín"],
                   /*Cabañas*/

@@ -1,109 +1,96 @@
-var banderaReg = 0, banderaSesion = 0, banderaReturn = 0, banderaLogin = 0;
-var cont = document.getElementById('contenedor');
+var boton_index = document.getElementById("btnIndex");
+var boton_login = document.getElementById("btnLog");
+var boton_registrar = document.getElementById("btnReg");
+var contenedor = document.getElementById("contenedor");
 var htmlRegistro = "";
 var htmlLogin = "";
-var htmlIndex = "";
+var htmlIndex =     "";
 var htmlVista = "";
 
 
-// REgistrarse
-htmlRegistro+="<section id='formularios'>";
-htmlRegistro+="   <section id='registro'>";
-htmlRegistro+="       <br>";
-htmlRegistro+="       <h2>Registro</h2>";
-htmlRegistro+="       <form id='frmregistro' class='cont'>";
-htmlRegistro+="           <label class='lbl' id='lbl1'>Nombres: </label>";
-htmlRegistro+="           <input type='text' id='nombres' class='txt' autocomplete='off'>";
-htmlRegistro+="           <label class='lbl' id='lbl2'>Apellidos: </label>";
-htmlRegistro+="           <input type='text' id='apellidos' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl3'>e-Mail: </label>";
-htmlRegistro+="           <input type='email' id='email' class='txt' autocomplete='off'>";
-htmlRegistro+="           <label class='lbl' id='lbl4'>Contraseña: </label>";
-htmlRegistro+="           <input type='password' id='pass' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl5'>Repetir contraseña: </label>";
-htmlRegistro+="           <input type='password' id='pass2' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <select id='departamento'>";
-htmlRegistro+="               <option value='default'>Departamento</option>";
-htmlRegistro+="               <option value='ahuachapan'>Ahuachapán</option>";
-htmlRegistro+="               <option value='cabanas'>Cabañas</option>";
-htmlRegistro+="               <option value='chalatenango'>Chalatenango</option>";
-htmlRegistro+="               <option value='cuscatlan'>Cuscatlán</option>";
-htmlRegistro+="               <option value='llibertad'>La Libertad</option>";
-htmlRegistro+="               <option value='lpaz'>La paz</option>";
-htmlRegistro+="               <option value='lunion'>La Unión</option>";
-htmlRegistro+="               <option value='morazan'>Morazan</option>";
-htmlRegistro+="               <option value='smiguel'>San Miguel</option>";
-htmlRegistro+="               <option value='ssalvador'>San Salvador</option>";
-htmlRegistro+="               <option value='svicente'>San Vicente</option>";
-htmlRegistro+="               <option value='sana'>Santa Ana</option>";
-htmlRegistro+="               <option value='sonsonate'>Sonsonate</option>";
-htmlRegistro+="               <option value='usulutan'>Usulutan</option>";
-htmlRegistro+="           </select>";
-htmlRegistro+="           <select name=' id='municipio'>";
-htmlRegistro+="               <option value='default'>Municipio</option>";
-htmlRegistro+="           </select>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl6'>Dirección: </label>";
-htmlRegistro+="           <input type='text' id='direccion' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br><br><br>";
-htmlRegistro+="           <select name=' id='pregunta'>";
-htmlRegistro+="               <option value='0'>¿Cuál es el nombre de tu madre?</option>";
-htmlRegistro+="               <option value='1'>¿Cuál fue el nombre de tu primera mascota?</option>";
-htmlRegistro+="               <option value='2'>¿Cuál fue el nombre de tu mejor amigo de la infancia?</option>";
-htmlRegistro+="               <option value='3'>¿Cuál es tu comida favorita?</option>";
-htmlRegistro+="               <option value='4'>¿Cuál es tu deporte favorito?</option>";
-htmlRegistro+="           </select>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl7'>Respuesta: </label>";
-htmlRegistro+="           <input type='text' id='respuesta' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl8'>Dui: </label>";
-htmlRegistro+="           <input type='text' id='dui' class='txt' autocomplete='off'>";
-htmlRegistro+="           <label class='lbl' id='lbl9'>Nit: </label>";
-htmlRegistro+="           <input type='text' id='nit' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl10'>Número celular: </label>";
-htmlRegistro+="           <input type='text' id='celular' class='txt' autocomplete='off'>";
-htmlRegistro+="           <br><br><br>";
-htmlRegistro+="           <select name='mes' id='mes'>";
-htmlRegistro+="               <option value='default'>Mes de nacimiento</option>";
-htmlRegistro+="               <option value='enero'>Enero</option>";
-htmlRegistro+="               <option value='febrero'>Febrero</option>";
-htmlRegistro+="               <option value='marzo'>Marzo</option>";
-htmlRegistro+="               <option value='abril'>Abril</option>";
-htmlRegistro+="               <option value='mayo'>Mayo</option>";
-htmlRegistro+="               <option value='junio'>Junio</option>";
-htmlRegistro+="               <option value='julio'>Julio</option>";
-htmlRegistro+="               <option value='agosto'>Agosto</option>";
-htmlRegistro+="               <option value='septiembre'>Septiembre</option>";
-htmlRegistro+="               <option value='octubre'>Octubre</option>";
-htmlRegistro+="               <option value='noviembre'>Noviembre</option>";
-htmlRegistro+="               <option value='diciembre'>Diciembre</option>";
-htmlRegistro+="           </select>";
-htmlRegistro+="           <select name='dia' id='dia'>";
-htmlRegistro+="               <option value='default'>Día de nacimiento</option>";
-htmlRegistro+="           </select>";
-htmlRegistro+="           <br>";
-htmlRegistro+="           <label class='lbl' id='lbl11'>Año de nacimiento: </label>";
-htmlRegistro+="           <input type='text' id='a_nacimiento' class='txt' autocomplete='off' maxlength='4'>";
-htmlRegistro+="           <input type='button' value='Enviar datos' id='enviar'>";
-htmlRegistro+="       </form>";
-htmlRegistro+="   </section>";
-htmlRegistro+="</section>";
-htmlRegistro+="            <div class='footer'>";
-htmlRegistro+="                <h4>eWallet</h4>";
-htmlRegistro+="                <ul>";
-htmlRegistro+="                    <li><a href='#'>Enlace</a></li>";
-htmlRegistro+="                    <li><a href='#'>Enlace</a></li>";
-htmlRegistro+="                    <li><a href='#'>Enlace</a></li>";
-htmlRegistro+="                    <li><a href='#'>Enlace</a></li>";
-htmlRegistro+="                </ul>";
-htmlRegistro+="                <span>eWallet R&L ©</span>";
-htmlRegistro+="            </div>";
+// Registrarse
+    htmlRegistro += "<h2>Registro</h2>";
+    htmlRegistro += "       <form id='frmregistro' class='cont'>";
+    htmlRegistro += "           <label class='lbl' id='lbl1'>Nombres: </label>";
+    htmlRegistro += "           <input type='text' id='nombres' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <label class='lbl' id='lbl2'>Apellidos: </label>";
+    htmlRegistro += "           <input type='text' id='apellidos' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl3'>e-Mail: </label>";
+    htmlRegistro += "           <input type='email' id='email' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <label class='lbl' id='lbl4'>Contraseña: </label>";
+    htmlRegistro += "           <input type='password' id='pass' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl5'>Repetir contraseña: </label>";
+    htmlRegistro += "           <input type='password' id='pass2' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <select id='departamento'>";
+    htmlRegistro += "               <option value='default'>Departamento</option>";
+    htmlRegistro += "               <option value='ahuachapan'>Ahuachapán</option>";
+    htmlRegistro += "               <option value='cabanas'>Cabañas</option>";
+    htmlRegistro += "               <option value='chalatenango'>Chalatenango</option>";
+    htmlRegistro += "               <option value='cuscatlan'>Cuscatlán</option>";
+    htmlRegistro += "               <option value='llibertad'>La Libertad</option>";
+    htmlRegistro += "               <option value='lpaz'>La paz</option>";
+    htmlRegistro += "               <option value='lunion'>La Unión</option>";
+    htmlRegistro += "               <option value='morazan'>Morazan</option>";
+    htmlRegistro += "               <option value='smiguel'>San Miguel</option>";
+    htmlRegistro += "               <option value='ssalvador'>San Salvador</option>";
+    htmlRegistro += "               <option value='svicente'>San Vicente</option>";
+    htmlRegistro += "               <option value='sana'>Santa Ana</option>";
+    htmlRegistro += "               <option value='sonsonate'>Sonsonate</option>";
+    htmlRegistro += "               <option value='usulutan'>Usulutan</option>";
+    htmlRegistro += "           </select>";
+    htmlRegistro += "           <select id='municipio'>";
+    htmlRegistro += "               <option value='default'>Municipio</option>";
+    htmlRegistro += "           </select>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl6'>Dirección: </label>";
+    htmlRegistro += "           <input type='text' id='direccion' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br><br><br>";
+    htmlRegistro += "           <select name=' id='pregunta'>";
+    htmlRegistro += "               <option value='0'>¿Cuál es el nombre de tu madre?</option>";
+    htmlRegistro += "               <option value='1'>¿Cuál fue el nombre de tu primera mascota?</option>";
+    htmlRegistro += "               <option value='2'>¿Cuál fue el nombre de tu mejor amigo de la infancia?</option>";
+    htmlRegistro += "               <option value='3'>¿Cuál es tu comida favorita?</option>";
+    htmlRegistro += "               <option value='4'>¿Cuál es tu deporte favorito?</option>";
+    htmlRegistro += "           </select>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl7'>Respuesta: </label>";
+    htmlRegistro += "           <input type='text' id='respuesta' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl8'>Dui: </label>";
+    htmlRegistro += "           <input type='text' id='dui' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <label class='lbl' id='lbl9'>Nit: </label>";
+    htmlRegistro += "           <input type='text' id='nit' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl10'>Número celular: </label>";
+    htmlRegistro += "           <input type='text' id='celular' class='txt' autocomplete='off'>";
+    htmlRegistro += "           <br><br><br>";
+    htmlRegistro += "           <select name='mes' id='mes'>";
+    htmlRegistro += "               <option value='default'>Mes de nacimiento</option>";
+    htmlRegistro += "               <option value='enero'>Enero</option>";
+    htmlRegistro += "               <option value='febrero'>Febrero</option>";
+    htmlRegistro += "               <option value='marzo'>Marzo</option>";
+    htmlRegistro += "               <option value='abril'>Abril</option>";
+    htmlRegistro += "               <option value='mayo'>Mayo</option>";
+    htmlRegistro += "               <option value='junio'>Junio</option>";
+    htmlRegistro += "               <option value='julio'>Julio</option>";
+    htmlRegistro += "               <option value='agosto'>Agosto</option>";
+    htmlRegistro += "               <option value='septiembre'>Septiembre</option>";
+    htmlRegistro += "               <option value='octubre'>Octubre</option>";
+    htmlRegistro += "               <option value='noviembre'>Noviembre</option>";
+    htmlRegistro += "               <option value='diciembre'>Diciembre</option>";
+    htmlRegistro += "           </select>";
+    htmlRegistro += "           <select name='dia' id='dia'>";
+    htmlRegistro += "               <option value='default'>Día de nacimiento</option>";
+    htmlRegistro += "           </select>";
+    htmlRegistro += "           <br>";
+    htmlRegistro += "           <label class='lbl' id='lbl11'>Año de nacimiento: </label>";
+    htmlRegistro += "           <input type='text' id='a_nacimiento' class='txt' autocomplete='off' maxlength='4'>";
+    htmlRegistro += "           <input type='button' value='Enviar datos' id='enviar'>";
+    htmlRegistro += "       </form>";
 
 
 
@@ -202,14 +189,24 @@ htmlIndex +='                                puede representar de forma más sen
 htmlIndex +='                             </p> ';
 htmlIndex +='                         </div>';
 
+boton_registrar.addEventListener("click",function(){
+    contenedor.innerHTML = "";
+    contenedor.innerHTML = htmlRegistro;
+    cargarEstilo();
+    iniciar();
+})
 
-document.getElementById('btnLog').addEventListener('click',function(){
-    cont.innerHTML = "";
-    cont.innerHTML = htmlLogin;
-    cargarRegistro();
+boton_login.addEventListener("click",function(){
+    contenedor.innerHTML = "";
+    contenedor.innerHTML = htmlLogin;
+    cargarEstilo();
 })
-document.getElementById('btnIndex').addEventListener('click',function(){
-    cont.innerHTML ="";
-    cont.innerHTML =htmlIndex;
+
+boton_index.addEventListener("click",function(){
+    contenedor.innerHTML = "";
+    contenedor.innerHTML = htmlIndex;
 })
+
+
+
 

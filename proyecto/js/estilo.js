@@ -1,4 +1,4 @@
-function cargarRegistro(){
+function cargarEstilo(){
     var inputs = document.getElementsByClassName('txt');
     var labels = document.getElementsByClassName("lbl");
     for (var i = 0; i < inputs.length; i++) {
