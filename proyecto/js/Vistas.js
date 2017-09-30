@@ -199,10 +199,14 @@ function primera_sesion() {
     contenedor.innerHTML = "";
     contenedor.innerHTML = htmlPrimera_sesion;
     boton_ingresarmonto = document.getElementById("btn_ingresarmonto");
-    bandera_sesion = true;
+    if (bandera_sesion == false) {
+        bandera_sesion = true;
+    }
 
-    boton_ingresarmonto.addEventListener("click", function(){
-    psesion();
+
+    boton_ingresarmonto.addEventListener("click", function () {
+        monto = document.getElementById("monto").value;
+        psesion();
     });
 }
 
