@@ -1,5 +1,10 @@
+var bandera_sesion = false;
+
 function iniciar_controles_login() {
     var btn_login = document.getElementById("iniciar_sesion");
+
+    datos[2] = "ola";
+    datos[3] = "123";
 
 
     btn_login.addEventListener("click", function () {
@@ -10,11 +15,26 @@ function iniciar_controles_login() {
 
 }
 
-function iniciar_login(correo, contra) {
+function psesion() {
+    if (bandera_sesion == false) {
+        primera_sesion();
+    } else {
+        monto = document.getElementById("monto").value;
+        contenedor.innerHTML = "";
+        contenedor.innerHTML = htmlVista;
+        document.getElementById('mostrar_dinero').innerHTML = monto;
+    }
+}
 
+function iniciar_login(correo, contra) {
+    var footer = document.getElementById("cont_footer");
     if (correo == datos[2]) {
         if (contra == datos[3]) {
             alert("Logeado");
+            footer.innerHTML = "";
+            psesion();
+
+
         } else {
             alert("No logeado");
         }
