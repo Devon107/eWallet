@@ -19,6 +19,7 @@ function psesion() {
     if (bandera_sesion == false) {
         primera_sesion();
     } else {
+        
         contenedor.innerHTML = "";
         contenedor.innerHTML = htmlVista;
         document.getElementById('mostrar_dinero').innerHTML = monto;

@@ -111,7 +111,7 @@ htmlVista += "                    <ul>";
 htmlVista += "                        <li id='liOp'><a>Cuentas</a>";
 htmlVista += "                            <ul id='liD' class='des'>";
 htmlVista += "                                <li><a href='#'>Efectivo</a></li>";
-htmlVista += "                                <li><a href='#'>Cuentas</a></li>";
+htmlVista += "                                <li><a href='#'>Cuentas</a> </li>";
 htmlVista += "                                <li><a href='#'>Tarjetas de Crédito</a></li>";
 htmlVista += "                            </ul>";
 htmlVista += "                        </li>";
@@ -123,16 +123,7 @@ htmlVista += "                    </ul>";
 htmlVista += "                </div>";
 htmlVista += "                <div class='contenido ' id='contenido'>";
 htmlVista += "                   <div class='info'>";
-htmlVista += "                        <section class='mostrarDinero'>";
-htmlVista += "                            <section class='tarjeta'>";
-htmlVista += "                                <span class='MostrarDatos'>Dinero Actual:</span>";
-htmlVista += "                                <section>";
-htmlVista += "                                    <img src='../../archivos_generales/img/dineroActual.png' class='imgDoc'>";
-htmlVista += "                                </section>";
-htmlVista += "                                <span class='MostrarDatos Dinero' id='mostrar_dinero'></span>";
-htmlVista += "                            </section>";
-htmlVista += "                        </section>";
-htmlVista += "                        <br><br><br><br><br><br><br><br><br><br><br><br><br>";
+    
 htmlVista += "                   </div>";
 htmlVista += "               <div class='footer'>";
 htmlVista += "                   <h4>eWallet</h4>";
@@ -147,6 +138,19 @@ htmlVista += "                </div>";
 htmlVista += "            </div>";
 htmlVista += "        </div> ";
 
+//Cuentas - Efectivo
+htmlCuentasEfectivo += "<section class='mostrarDinero'>";
+htmlCuentasEfectivo += "    <section class='tarjeta'>";
+htmlCuentasEfectivo += "        <span class='MostrarDatos'>Dinero Actual:</span>";
+htmlCuentasEfectivo += "        <section>";
+htmlCuentasEfectivo += "            <img src='../archivos_generales/img/dineroActual.png' class='imgDoc'>";
+htmlCuentasEfectivo += "            <br>";
+htmlCuentasEfectivo += "            <span class='MostrarDatos' id='dineroTotal'></span>";
+htmlCuentasEfectivo += "        </section>";
+htmlCuentasEfectivo += "        <span class='MostrarDatos Dinero' id='mostrar_dinero'></span>";
+htmlCuentasEfectivo += "    </section>";
+htmlCuentasEfectivo += "</section>";
+htmlCuentasEfectivo += "<br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br>";
 
 
 // Login

@@ -24,7 +24,7 @@
     // Codigo para e sider, para desblegar el ul cuando le den click
     $('liOp').addEventListener('click',function(){
         obj = $('liD').getAttribute('class');
-        
+        console.log(obj)
         if(obj == 'des'){
             $('liD').classList.remove('des');
             $('liD').classList.add('act');
@@ -34,6 +34,17 @@
         }
     })
     
+    $('liCu').addEventListener('click',function(){
+        obj = $('liC').getAttribute('class');
+          
+        if(obj == 'des'){
+            $('liC').classList.remove('des');
+            $('liC').classList.add('act');
+        }else{
+            $('liC').classList.remove('act');
+            $('liC').classList.add('des');
+        }
+    })
     
 
     var inputs = document.getElementsByClassName('txt');
