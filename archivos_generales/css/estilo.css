@@ -18,7 +18,7 @@ body {
 .btnMenu {
     top: 0;
     position: relative;
-    display: none;
+    display: block;
     padding: 20px;
     background: #3e50b4;
     color: #fff;
@@ -28,6 +28,7 @@ body {
     position: fixed;
     width: 20%;
     height: 100%;
+   
     background: #FDFDFD;
     color: #fff;
 }
@@ -41,6 +42,7 @@ body {
 
 .barra-lateral ul {
     list-style: none;
+    
 }
 
 .barra-lateral a {
@@ -73,6 +75,7 @@ body {
 
 .act {
     display: block;
+    background: #DCDCDC;
 }
 
 /**
@@ -117,16 +120,15 @@ body {
 }
 
 .contenido .info {
-    padding: 30px
+    padding: 30px;
+    margin: auto;
+    
 }
 
 .btn-bar {
     cursor: pointer;
 }
 
-.cont-Father {
-    width: 100%;
-}
 
 #indexInfo {
     
@@ -182,6 +184,18 @@ a {
 li {
     list-style: none;
 }
+/* LAteral */
+ .sub{
+   display: none;
+   
+}
+.VistaMenu .Primer ul a{
+    position: relative;
+    left: 5%;
+   
+    outline-color: #DCDCDC;
+}
+
 
 /**
    * Footer Styles
@@ -340,12 +354,21 @@ a {
     margin: auto;
 }
 
-
+.tarjeta div{
+    margin-left: 35%;
+}
+.tarjeta2 div{
+    margin-left: 25%;
+}
+#motivo{
+    width: 14;
+}
 /* imgs Estilos generales */
 
 .imgDoc {
-    width: 100%;
-    height: auto;
+    width: 20%;
+    height: 20%;
+    margin: auto;
 }
 
 /* Cuentas - Mostrar Dinero */
@@ -361,8 +384,18 @@ a {
     margin: auto;
 }
 
-
-
+.Sec-Info{
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+}
+/*  */
+#tarjetas{
+    display: none;
+}
+#cuentas{
+    display: none;
+}
 
 /**
   * Responsive 
@@ -378,6 +411,8 @@ a {
         display: none;
     }
     .barra-lateral {
-        display: none;
+        width:70%;
     }
+   .
+   
 }

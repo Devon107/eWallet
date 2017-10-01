@@ -139,6 +139,8 @@ htmlVista += "            </div>";
 htmlVista += "        </div> ";
 
 //Cuentas - Efectivo
+htmlCuentasEfectivo ="";
+
 htmlCuentasEfectivo += "<section class='mostrarDinero'>";
 htmlCuentasEfectivo += "    <section class='tarjeta'>";
 htmlCuentasEfectivo += "        <span class='MostrarDatos'>Dinero Actual:</span>";
