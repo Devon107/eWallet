@@ -333,19 +333,7 @@ a {
     color: rgb(226, 27, 27);
 }
 
-@media screen and (max-width: 450px) {
 
-    .mostrar {
-        display: none;
-    }
-    .botonBar {
-        display: block;
-    }
-    .menuLateral {
-        position: fixed;
-        display: inline;
-    }
-}
 
 /* tarjeta */
 
